@@ -29,6 +29,9 @@ spec:
     metadata:
       annotations:
         seccomp.security.alpha.kubernetes.io/pod: "runtime/default"
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /metrics
+        prometheus.io/port: "8080"
       labels:
         k8s-app: gcs-fuse-csi-driver
     spec:
@@ -52,6 +55,10 @@ spec:
             - --nodeid=$(KUBE_NODE_NAME)
             - --node=true
             - --identity-provider=$(IDENTITY_PROVIDER)
+            - --metrics-endpoint=:8080
+          ports:
+          - containerPort: 8080
+            name: metrics
           resources:
             limits:
               cpu: 200m
