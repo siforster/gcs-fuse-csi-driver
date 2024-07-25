@@ -90,7 +90,7 @@ See the GKE documentation: [Access Cloud Storage buckets with the Cloud Storage 
     ...
     ```
 
-    If not, follow the GKE documentation to grant one of the [IAM roles for Cloud Storage](https://cloud.devsite.corp.google.com/storage/docs/access-control/iam-roles) to the Kubernetes ServiceAccount.
+    If not, follow the GKE documentation to grant one of the [IAM roles for Cloud Storage](https://cloud.google.com/storage/docs/access-control/iam-roles) to the Kubernetes ServiceAccount.
 
 ## Validate the GCP and Kubernetes ServiceAccount setup (deprecated)
 
